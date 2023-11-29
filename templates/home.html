@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+ 
+{% block content %}
+ 
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../static/css/image/image1.jpg" class="img-fluid rounded-start" alt="charity" width="540" height="430">
+      </div>
+      <div class="col-md-6">
+        <div class="p-5 bg-light rounded-end">
+          <h1 class="text-primary">Saving lives with your support</h1>
+          <p>We provide a trusted donation channel for people to support individuals and organizations in need.</p>
+          <a href="{% url 'login' %}" class="btn btn-lg btn-outline-primary">Donate now</a>
+        </div>
+      </div>
+    </div>
+
+    <header class="bg-light text-dark text-center text-md-right p-5 my-5">
+      <h1 class="text-primary">An approach for nonprofits</h1>
+    </header>
+
+    <main>
+      <div class="row">
+        <div class="col-md-4 text-center rounded">
+          <i class="rounded-circle p-5 bg-light fa-solid fa-circle-dollar-to-slot" style="color: black; font-size: 3rem;"></i>
+          <div class="bg-light m-3 p-2">
+            <h2 class="text-primary rounded text-center mt-3">Start Donating</h2>
+            <p class="text-justify">Donate your surplus income to help those in need.</p>
+            <a href="{% url 'register' %}" class="nav-link text-primary">Register</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center rounded">
+          <i class="rounded-circle p-5 bg-light fa-solid fa-handshake-angle" style="color: black; font-size: 3rem;"></i>
+          <div class="bg-light m-3 p-2">
+            <h2 class="text-primary rounded text-center mt-3">Become a Volunteer</h2>
+            <p class="text-justify">Contribute your time and skills to make a difference.</p>
+            <a href="{% url 'register' %}" class="nav-link text-primary">Register</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center rounded">
+          <i class="rounded-circle p-5 bg-light fa-solid fa-hand-holding-heart" style="color: red; font-size: 3rem;"></i>
+          <div class="bg-light rounded m-3 p-2">
+            <h2 class="text-primary text-center mt-3">Quick Fundraise</h2>
+            <p class="text-justify">Easily raise funds for your cause.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {%endblock%}

@@ -1,0 +1,24 @@
+{%extends 'donation/base.html'%}
+{% load static%}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<h2 style="padding: 50px;">Hello, {{request.user.username}} welcome to Our Donation Platform</h2>
+
+{%endif%}
+
+<div class="row">
+    <div class="col-md-6">
+      <img src="../static/css/image/image1.jpg" class="img-fluid rounded-start" alt="charity" width="540" height="430">
+    </div>
+    <div class="col-md-6">
+      <div class="p-5 bg-light rounded-end">
+        <h1 class="text-primary">Saving lives with your support</h1>
+        <p>We provide a trusted donation channel for people to support individuals and organizations in need.</p>
+        <a href="{% url  'donate' %}" class="btn btn-lg btn-outline-primary">Donate now</a>
+      </div>
+    </div>
+  </div>
+{%endblock%}

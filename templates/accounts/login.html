@@ -1,0 +1,26 @@
+{% extends 'base.html'%} {%block content%}
+
+<div class="col-md-6 offset-md-3">
+
+<h2>Login</h2>
+<form action="" method="post">
+
+  
+  {% csrf_token %}
+  {{ form.as_p }}
+    <div class="form-group">
+      <p><input class="btn btn-info align-center" value="Login" type="submit">
+        <br>
+        forgot password?
+        <a href="{% url 'home' %}">password_reset</a>
+      </p>
+    </div>
+
+  
+</form>
+
+
+<br>
+Dont have an account? <a href="{% url 'register' %}">Sign up</a>
+</div>
+{%endblock%}
